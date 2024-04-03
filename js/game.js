@@ -326,7 +326,10 @@ function gameOver(){
         else{
             document.querySelector("#gameOverMessage").innerText = `Empate!`;
         }
-        modalGameOver.show();
+
+        if(!document.querySelector("#gameOverModal").classList.contains("show")){
+            modalGameOver.show();
+        }
 
         return true;
     }
